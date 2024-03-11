@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css">
+    <title>Administrator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1><span class="grim">GRIM</span><span class="lock">LOCK</span></h1>
+
+        <form action="#" id="admin">
+            <div class="input-group">
+                <h2>Administrator</h2>
+            </div>
+            <div class="input-group">
+                <input required="" type="password" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Admin ID</label>
+            </div>
+            <div class="input-group">
+                <input required="" type="password" name="text" autocomplete="off" class="input" />
+                <label class="user-label">Password</label>
+            </div>
+            <div class="input-group">
+                <button class="login">Log in</button>
+            </div>
+        </form>
+        <div class="input-group">
+            <button class="back" onclick="goBack()">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZUlEQVR4nO3YvUoDQRAA4DGihRZaCWKtz6KNnSBqrWBjEW4npFlBC18hlTEzB7pkNqAgWAmWgqUWNpa+goh6ckj0EqwiJMw5H0x5x+wy+zMLYIwxxhgzevVmWECWJrIceu8roEmdZB4pPiLHLI9aS5ZBi2pL5hzLfTd5JHlJ0vYiaLB33JlFjnffyXN8TUhWQQMMYcZxvP2Z+fjmUlkHDaqtq2lkuekm7zi+I8Ut0MA3zqccy3Wh5j8cyQ5o4EOYRJLLYvIJyS5osN1oTCDJRWHBZo47DjRYC2HcUTwtJo8kddCSPFJM+5LfBw2895Wv60GhbEieaqngMALznS3LxgYeQP6DnpkfQSSpbA48gPxj1QPwv5QQcnx2FI+GEcjtjT+VkPpF3DMIljOV22jfKazzICvFVaIUl7lSXKdL0dCUoqUsNvXI8lBs6msncQk0P6s4jiug9WHLkRyoe9gyxhhjzH/1CV6rihKBK/yfAAAAAElFTkSuQmCC">
+            </button>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Verification</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="otp-h1">VERIFY YOUR ACCOUNT</h1>
+        <p class="otp-p1">Please enter the One-Time Password to verify your account</p>
+        <p class="otp-p2">A One-Time Password has been sent to <span class="otp-s1">user@my.cspc.edu.ph</span></p>
+
+        <form action="#" id="admin">
+            <div class="input-group">
+                <!-- Define OTP input fields -->
+                <input required="" type="text" name="otp1" maxlength="1" pattern="[0-9]" class="otp-input" autocomplete="off" onkeyup="moveToNext(this, 'otp2')"/>
+                <!-- First digit of OTP -->
+                <input required="" type="text" name="otp2" maxlength="1" pattern="[0-9]" class="otp-input" autocomplete="off" onkeyup="moveToNext(this, 'otp3')"/>
+                <!-- Second digit of OTP -->
+                <input required="" type="text" name="otp3" maxlength="1" pattern="[0-9]" class="otp-input" autocomplete="off" onkeyup="moveToNext(this, 'otp4')"/>
+                <!-- Third digit of OTP -->
+                <input required="" type="text" name="otp4" maxlength="1" pattern="[0-9]" class="otp-input" autocomplete="off" onkeyup="moveToNext(this, 'otp5')"/>
+                <!-- Fourth digit of OTP -->
+                <input required="" type="text" name="otp5" maxlength="1" pattern="[0-9]" class="otp-input" autocomplete="off" onkeyup="moveToNext(this, 'otp6')"/>
+                <!-- Fifth digit of OTP -->
+                <input required="" type="text" name="otp6" maxlength="1" pattern="[0-9]" class="otp-input" autocomplete="off"/>
+                <!-- Sixth digit of OTP -->
+            </div>
+            <div class="input-group">
+                <button type="submit" class="validate">Validate</button>
+            </div>
+        </form>
+        <a class="resend" href="#">Resend One-Time Password</a>
+    </div>
+
+    <script>
+        function moveToNext(input, nextInputId) {
+            if (input.value.length === 1 && nextInputId !== '') {
+                document.getElementById(nextInputId).focus();
+            }
+        }
+    </script>
+</body>
+
+</html>

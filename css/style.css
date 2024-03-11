@@ -1,4 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap");
+
+:root {
+  /* font  */
+  --font-family: "Lora", serif;
+
+  /* color  */
+  --primary: #77A4AE;
+  --txtcolor:#67cee5;
+  --txtcolor2: rgb(92, 92, 92);
+}
+
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Lora";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fd;
+  font-family: "Lora";
+}
+
+.container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 40px 60px;
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.container h1 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.container .grim {
+  color: rgb(92, 92, 92);
+}
+
+.container .lock {
+  color: var(--primary);
+}
+
+/* --------------------------------role------------------------------------ */
+
+.user-role {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  background-color: #ffff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-role button {
+  color: rgb(92, 92, 92);
+  padding: 10px 15px;
+  background-color: transparent;
+  width: 50%;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  font-family: var(--font-family);
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+/* --------------------------------input------------------------------------ */
+
+.input-group {
+  position: relative;
+}
+
+.input {
+  border: 3px solid rgba(92, 92, 92, 0.267);
+  border-radius: 10px;
+  background: none;
+  padding: 0.6rem;
+  width: 400px;
+  font-size: 1rem;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
+}
+
+.user-label {
+  position: absolute;
+  left: 25px;
+  color: rgb(92, 92, 92);
+  pointer-events: none;
+  transform: translateY(0.6rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+  outline: none;
+}
+
+.input:focus ~ label,
+input:valid ~ label {
+  transform: translateY(-50%) scale(0.8);
+  background-color: #f8f9fd;
+  padding: 0 0.2em;
+  left: 15px;
+}
+
+.login {
+  background-color: var(--primary);
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  padding: 0.6rem;
+  outline: none;
+  border: 3px solid var(--primary);
+  margin-bottom: 20px;
+}
+
+.google {
+  background-color: transparent;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color:rgb(92, 92, 92);
+  padding: 0.6rem;
+  outline: none;
+  border: 3px solid var(--primary);
+  margin-bottom: 20px;
+}
+
+/* --------------------------------Verification------------------------------------ */
+
+.otp-h1 {
+  color: var(--primary);
+  margin: 0;
+  font-size: 4.375em; 
+  font-weight: 700;
+  font-family: var(--font-family);
+}
+
+.otp-p1 {
+  color: #6A6A6A;
+  margin: 0;
+  font-size: 2em; 
+  font-weight: 500;
+  font-family: var(--font-family);
+}
+
+.otp-p2 {
+  color: #6A6A6A;
+  margin: 0;
+  font-size: 1.5em; 
+  font-weight: 500;
+  font-family: var(--font-family);
+}
+
+.otp-p2 span {
+  color: #77A4AE;
+}
+
+
+/* -------------------------------otp-input------------------------------------ */
+.otp-input {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px; 
+  text-align: center;
+  font-size: 1.2em; 
+  border: 3px solid rgba(92, 92, 92, 0.267); 
+  border-radius: 10px; 
+  background-color:transparent;
+  margin: 10px; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.otp-input:focus {
+  outline: none;
+}
+
+.otp-input:valid {
+  background-color: var(--primary);
+  color: white;
+  border: 0.1875em solid var(--primary);
+  border: 3px solid var(--primary);
+}
+
+.validate {
+  background-color: var(--primary);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  padding: 0.6rem 6rem;
+  outline: none;
+  border: 3px solid var(--primary);
+  margin-bottom: 10px;
+  font-family: var(--font-IBM);
+}
+
+.resend{
+  color: #6A6A6A;
+  text-decoration: none;
+  margin: 0;
+  font-size: 1.1em; 
+  font-weight: 500;
+}
+
+.resend:hover{
+  color: #ff5353;
 }
